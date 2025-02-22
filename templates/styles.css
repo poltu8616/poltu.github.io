@@ -1,0 +1,102 @@
+/* Round-shaped image with a 3D glass button look */
+img {
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), inset 0px -3px 8px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  border: 1px solid #ccc;
+}
+
+/* Text boxes with scrollbars, rounded corners, and a shadow effect */
+input[type="text"],input[type="email"], textarea {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: auto;
+}
+.btn
+{width:auto;height:40px;
+ box-shadow: 4px 4px 4px gray;
+ border-radius:10px;border:1px dotted lightgray;background-color:white; text-shadow: 3px 3px 3px gray ;background-image:radial-gradient(circle at center,  #ffffff,#AAAAAA)}
+
+.btn:hover{color:gray;background-image:radial-gradient(circle at center,  #ffffff,#e6e6e6)}
+/* Hyperlinks with an extra glowing effect */
+a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: #000;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+a:hover::after {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1), 0 0 25px rgba(0, 0, 0, 0.7);
+}
+.drop-text {
+  display: block;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.drop-text li {
+  display: block;
+  
+  animation: drop 0.5s ease forwards;
+  background-color:lightgray;
+  border-radius:10px;
+  opacity: 0;
+  transform: translateY(-100%);
+  padding:15px;
+  margin:10px;
+}
+
+.drop-text li:nth-child(1) {
+  animation-delay: 1s;
+  
+  
+}
+.drop-text li:nth-child(2) {
+  animation-delay: 3s;
+  
+  
+}
+.drop-text li:nth-child(3) {
+  
+  animation-delay: 5s;
+}
+
+.drop-text li:nth-child(4) {
+
+  animation-delay: 10s;
+  transform: translateY(10);
+}
+
+/* Add more nth-child selectors as needed */
+
+@keyframes drop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container { display: flex; flex-direction: column; height: 70%; width:50%;align-content:center }
+.upper-section { display: flex; height: 70%; scroll-behavior:auto;}
+.form-section { flex: 1; padding: 20px;  }
+.image-section { flex: 1; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.chat-section { height: 30%; padding: 20px; border-top: 2px solid #ccc; overflow-y: auto; }
+.conversation { font-family: Arial, sans-serif; line-height: 1.6; }
+code { background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
+form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+textarea { width: 100%; }
+img { max-width: 80%; height: auto; margin-bottom: 20px; }

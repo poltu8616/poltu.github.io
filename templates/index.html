@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Repl Auth</title>
+    <script>
+      function autoScroll() {
+        const scrollableDiv = document.getElementById('scrollable');
+        scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+      }
+
+      // Call the autoScroll function after a delay to allow content rendering
+      window.onload = function() {
+        setTimeout(autoScroll, 10000);
+      };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="/templates/styles.css">
+    <style>
+     </style>
+  </head>
+  <body style="margin: 0; font-family: Arial, sans-serif;">
+    <center>
+      <h1 style="text-shadow:3px 3px 3px lightgray">Sarbani's Tutorial Home</h1>
+      <div class="container">
+      <div class="upper-section">
+        <div class="form-section">
+          <form method="POST" action="/">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ name if name else '' }}" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ email if email else '' }}" required>
+            <textarea id="qry" name="qry" rows=5 placeholder="Ask the assitant" required></textarea>
+             <input type="submit" value="Send" class="btn"> </form><br>
+          
+            <a href="/booking"><button type="button" class="btn">Book an appointment</button></a>
+          
+        </div>
+        <div class="image-section">
+          <img class="image" src="/templates/prajnya1.jpg" height="50" width="auto" alt="Assistant Image">
+          <ul type="none" class="drop-text" id="scrollable">
+            <li>Hello,&nbsp;this&nbsp;is&nbsp;Prajnya</li>
+            
+            <li>Sarbani's&nbsp;AI&nbsp;assistant.</li>
+            
+            <li>How&nbsp;can&nbsp;I&nbsp;help&nbsp;you&nbsp;today?</li>
+           
+
+            
+            
+          </ul>
+        </div>
+      </div>
+      <div class="chat-section">
+        {% if show_response %}
+        <div class="conversation">
+          {{ response | safe }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+      </center>
+  </body>
+</html>
