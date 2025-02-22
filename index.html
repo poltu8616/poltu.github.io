@@ -45,15 +45,15 @@
             Hello world! <br />
             This is the current date and time, as computed by Python:
             <script type="py">
- from pyscript import display
 from datetime import datetime
 import time
 k=0
-while (k<30):
-	now = datetime.now()
- 	display(now.strftime("%m/%d/%Y, %H:%M:%S"))
-	time.sleep(10)
-	k=k+1
+while (k<10):
+    now = datetime.now().time()
+    formatted_time = now.strftime("%H:%M:%S")
+    print(formatted_time)
+    time.sleep(1)
+    k=k+1
 
 
             </script>
