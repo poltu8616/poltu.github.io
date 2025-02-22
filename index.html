@@ -47,11 +47,13 @@
             <script type="py">
  from pyscript import display
 from datetime import datetime
-import asyncio
+import time
+
 while True:
- now = datetime.now()
- display(now.strftime("%m/%d/%Y, %H:%M:%S"))
-aynco.leep(5)
+	now = datetime.now()
+ 	display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+	time.sleep(1)
+
             </script>
         </section>
     </body>
