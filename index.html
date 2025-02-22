@@ -46,20 +46,22 @@
             This is the current time, as computed by Python:
             <script type="py">
 
-from datetime import datetime
-from pyscript import display
-import time
-k=0
-while (k<10):
-    time.sleep(1)
-    k=k+1
-    now = datetime.now().time()
-    formatted_time = now.strftime("%H:%M:%S") 
-    display(formatted_time)
-    time.sleep(1)
-	
+from js import document
 
+        # Create HTML content
+ html_content = """
+ <h2>Welcome to PyScript!</h2>
+  <p>This is an example of <strong>HTML formatted output</strong> using PyScript.</p>
+  <ul>
+   <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+     </ul>
+"""
+# Insert HTML content into the div with id 'output'
+document.getElementById('output').innerHTML = html_content
+    </py-script>
             </script>
         </section>
     </body>
-</html>
+</html> 
