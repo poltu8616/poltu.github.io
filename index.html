@@ -48,11 +48,13 @@
  from pyscript import display
 from datetime import datetime
 import time
-
-while (True):
+k=0
+while (k<30):
 	now = datetime.now()
  	display(now.strftime("%m/%d/%Y, %H:%M:%S"))
-	time.sleep(1)
+	time.sleep(10)
+	k=k+1
+
 
             </script>
         </section>
